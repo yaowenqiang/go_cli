@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"sync"
+	"C"
 )
 
 func main() {
@@ -18,4 +19,10 @@ func main() {
 	wg.Wait()
 }
 
+//export Hello
+func Hello()  {
+	fmt.Println("Hello")
+}
+
+//go build --buildmode=c-archive main.go
 
