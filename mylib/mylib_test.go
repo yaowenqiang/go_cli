@@ -5,6 +5,7 @@ import (
 )
 
 func Test_BasicChecks(t *testing.T) {
+	t.Parallel()
 	t.Run("Go can add", func(t *testing.T ) {
 		if 1 + 1 != 2 {
 			t.Fail()
