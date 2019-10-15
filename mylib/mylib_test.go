@@ -17,3 +17,15 @@ func Test_BasicChecks(t *testing.T) {
 		}
 	})
 }
+
+func TestAdder(t *testing.T) {
+	if adder(2, 5) != 7 {
+		t.Fail()
+	}
+}
+
+func BenchmarkAdder(b *testing.B) {
+	for i:=0; i < 10; i ++{
+		adder(5, 7)
+	}
+}
